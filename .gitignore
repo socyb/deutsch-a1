@@ -1,0 +1,15 @@
+# Material de trabajo: nunca se publica
+LOCAL/
+.DS_Store
+
+# Formatos que la página no usa
+*.pdf
+*.zip
+*.docx
+*.pptx
+*.xlsx
+*.key
+*.wav
+*.m4a
+*.md
+!README.md

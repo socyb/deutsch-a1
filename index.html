@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deutsch A1 · Übungen</title>
+<meta name="description" content="Ejercicios para practicar entre clase y clase: Deutsch A1 con Momente.">
+<script>
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem("deutsch-a1-theme"); } catch (e) {}
+    if (!t) t = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    document.documentElement.dataset.theme = t;
+  })();
+</script>
+<link rel="stylesheet" href="assets/deutsch-a1.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="./">
+    <svg class="brand-mark" viewBox="0 0 34 34" aria-hidden="true"><rect x="1" y="1" width="32" height="32" rx="8" fill="var(--card)" stroke="var(--edge)" stroke-width="2"/><rect x="7" y="9" width="20" height="4" fill="var(--ink)"/><rect x="7" y="15" width="20" height="4" fill="var(--guinda)"/><rect x="7" y="21" width="20" height="4" fill="var(--amber)"/></svg>
+    <span class="brand-text"><strong>Deutsch A1</strong><small>Übungen · Momente</small></span>
+  </a>
+  <div class="topbar-actions">
+    <button class="qr-btn" id="qrBtn" type="button" aria-label="Mostrar el código QR de esta página"><img src="assets/qr-index.svg" alt=""></button>
+    <button class="icon-btn" id="themeBtn" type="button" aria-label="Cambiar tema">☾</button>
+  </div>
+</header>
+
+<section class="hero">
+  <svg class="hero-rose" viewBox="0 0 200 200" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1"><circle cx="100" cy="100" r="96"/><circle cx="100" cy="100" r="70"/><circle cx="100" cy="100" r="44"/><path d="M100 4 112 88 196 100 112 112 100 196 88 112 4 100 88 88Z" fill="currentColor" fill-opacity=".08"/><path d="M100 30 106 94 170 100 106 106 100 170 94 106 30 100 94 94Z" transform="rotate(45 100 100)"/></svg>
+  <div class="hero-inner">
+    <p class="kicker">Deutsch A1 · Momente</p>
+    <h1 class="hero-title">Üben zwischen <em>den Stunden</em></h1>
+    <p class="hero-sub">Ejercicios cortos para repasar entre una clase y la siguiente, con audio y solución.</p>
+    <p class="hero-meta">Prof. <b>Jorge Cardiel Herrera</b> · clase los <b>miércoles</b></p>
+  </div>
+</section>
+
+<div class="nowbar" aria-live="polite">
+  <div class="nowbar-inner">
+    <div class="nowbar-item"><span>Hoy</span><strong id="hoy">—</strong></div>
+    <div class="nowbar-item"><span>Abiertos ahora</span><strong id="nAbiertos">—</strong></div>
+    <div class="nowbar-item"><span>Próxima entrega</span><strong id="proxEntrega">—</strong></div>
+  </div>
+</div>
+
+<main>
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker k-teal">Hausaufgabe</p>
+        <h2>Para esta semana</h2>
+        <p class="lead">Cada ejercicio queda abierto hasta la clase siguiente. Contesta primero y corrige después: al revés no sirve de nada.</p>
+      </div>
+      <div class="ulist" id="ulist"></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Deutsch A1</strong> · Ejercicios basados en <em>Momente A1</em> (Hueber). Prof. Jorge Cardiel Herrera.</p>
+  </div>
+</footer>
+
+<dialog class="qr-modal" id="qrModal" aria-label="Código QR de esta página">
+  <img src="assets/qr-index.svg" alt="Código QR que abre esta página">
+  <p>socyb.github.io/deutsch-a1/</p>
+  <form method="dialog"><button class="btn btn-small">Cerrar</button></form>
+</dialog>
+
+<script src="assets/deutsch-a1.js"></script>
+</body>
+</html>
