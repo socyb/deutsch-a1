@@ -6,4 +6,4 @@ Ejercicios para practicar alemán entre una clase y la siguiente, con el libro *
 
 Cada ejercicio queda abierto hasta la clase siguiente.
 
-Prof. Jorge Cardiel Herrera
+Prof. Jorge Cardiel
