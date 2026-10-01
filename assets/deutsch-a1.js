@@ -77,7 +77,7 @@
     lista.innerHTML = abiertos.length
       ? abiertos.map(u =>
           '<a class="ucard" href="' + u.href + location.search + '">' +
-          '<p class="kicker k-blue">' + u.libro + '</p>' +
+          '<span class="label c-der">' + u.libro + '</span>' +
           '<h3>' + u.titel + '</h3>' +
           '<p>' + u.tema + '</p>' +
           '<span class="due">Hasta el ' + largo(u.hasta) + '</span></a>').join("")
@@ -98,7 +98,7 @@
       const antes = HOY < u.desde;
       zona.innerHTML =
         '<section class="section"><div class="wrap"><div class="card closed">' +
-        '<p class="kicker">' + (antes ? "Todavía no" : "Ejercicio cerrado") + '</p>' +
+        '<span class="label c-die">' + (antes ? "Noch nicht" : "Geschlossen") + '</span>' +
         '<h2>' + (antes ? "Se abre el " + largo(u.desde) + "." : "Estuvo abierto del " + largo(u.desde, false) + " al " + largo(u.hasta, false) + ".") + '</h2>' +
         '<p><a class="btn" href="./' + location.search + '">Ver los ejercicios abiertos</a></p>' +
         '</div></div></section>';

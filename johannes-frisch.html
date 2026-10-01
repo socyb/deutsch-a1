@@ -19,7 +19,7 @@
 
 <header class="topbar">
   <a class="brand" href="./">
-    <svg class="brand-mark" viewBox="0 0 34 34" aria-hidden="true"><rect x="1" y="1" width="32" height="32" rx="8" fill="var(--card)" stroke="var(--edge)" stroke-width="2"/><rect x="7" y="9" width="20" height="4" fill="var(--ink)"/><rect x="7" y="15" width="20" height="4" fill="var(--guinda)"/><rect x="7" y="21" width="20" height="4" fill="var(--amber)"/></svg>
+    <svg class="brand-mark" viewBox="0 0 36 36" aria-hidden="true"><rect x="3" y="2" width="30" height="32" rx="4" fill="#1f45b0"/><rect x="3" y="2" width="5" height="32" rx="2" fill="#16337f"/><rect x="11" y="9" width="18" height="11" rx="4" fill="#fff"/><path d="M14 13h12M14 16.5h8" stroke="#d4213a" stroke-width="1.4" stroke-linecap="round"/></svg>
     <span class="brand-text"><strong>Deutsch A1</strong><small>← Todos los ejercicios</small></span>
   </a>
   <div class="topbar-actions">
@@ -30,22 +30,28 @@
 </header>
 
 <section class="hero">
-  <svg class="hero-rose" viewBox="0 0 200 200" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1"><circle cx="100" cy="100" r="96"/><circle cx="100" cy="100" r="70"/><circle cx="100" cy="100" r="44"/><path d="M100 4 112 88 196 100 112 112 100 196 88 112 4 100 88 88Z" fill="currentColor" fill-opacity=".08"/><path d="M100 30 106 94 170 100 106 106 100 170 94 106 30 100 94 94Z" transform="rotate(45 100 100)"/></svg>
-  <div class="hero-inner">
-    <p class="kicker">Hausaufgabe · Kursbuch, S. 44 · Lied</p>
-    <h1 class="hero-title">Johannes Frisch hat <em>keinen Tisch</em></h1>
-    <p class="hero-sub">Doce personas, doce cosas que tienen o que les faltan. El apellido rima con la cosa.</p>
-    <p class="hero-meta">Practicas el <b>Akkusativ</b> con <b>ein-</b> y <b>kein-</b>, ahora de oído.</p>
+  <div class="wrap hero-grid">
+    <div>
+      <p class="hero-kicker">Hausaufgabe · ein Lied!</p>
+      <h1 class="hero-title">Johannes Frisch hat <span class="mark">keinen Tisch</span></h1>
+      <p class="hero-sub">Doce personas, doce cosas que tienen o que les faltan. El apellido rima con la cosa.</p>
+    </div>
+    <div class="etikett" aria-label="Datos del ejercicio">
+      <div class="etikett-row"><span>Fach</span><b>Deutsch A1</b></div>
+      <div class="etikett-row"><span>Thema</span><b>Akkusativ: ein- · kein-</b></div>
+      <div class="etikett-row"><span>Buch</span><b>Kursbuch, S. 44</b></div>
+      <div class="etikett-row"><span>Übung</span><b>Hören und schreiben</b></div>
+    </div>
   </div>
 </section>
 
-<div class="nowbar" aria-live="polite">
-  <div class="nowbar-inner">
-    <div class="nowbar-item"><span>Hoy</span><strong id="hoy">—</strong></div>
-    <div class="nowbar-item"><span>Abierto hasta</span><strong id="hasta">—</strong></div>
-    <div class="nowbar-item"><span>Tu avance</span><strong id="estado">0 de 11</strong></div>
+<section aria-live="polite">
+  <div class="wrap karten">
+    <div class="karte"><span>Heute</span><strong id="hoy">—</strong></div>
+    <div class="karte"><span>Abgabe bis</span><strong id="hasta">—</strong></div>
+    <div class="karte"><span>Dein Stand</span><strong id="estado">0 de 11</strong></div>
   </div>
-</div>
+</section>
 
 <main id="contenido"></main>
 
@@ -54,7 +60,7 @@
     <section class="section">
       <div class="wrap">
         <div class="section-head">
-          <p class="kicker k-teal">So geht's</p>
+          <span class="label c-das">So geht's</span>
           <h2>Cinco pasos</h2>
         </div>
         <ol class="steps">
@@ -67,7 +73,7 @@
       </div>
     </section>
 
-    <section class="section section-alt">
+    <section class="section">
       <div class="wrap grid-2">
         <div class="stack">
           <div class="player"><span class="note" aria-hidden="true">♪</span><audio controls preload="metadata" src="assets/johannes-frisch/lied.mp3" aria-label="Canción Johannes Frisch hat keinen Tisch"></audio></div>
@@ -79,44 +85,46 @@
 
         <div class="stack">
           <div class="card">
-            <p class="kicker k-blue">Übung · Hören und schreiben</p>
+            <span class="label c-der">Übung · Hören und schreiben</span>
             <h3>Wer hat was (nicht)?</h3>
-            <ul class="lines" id="huecos">
-              <li><span class="n">0</span>Hubertus Grille braucht <span class="ex">eine Brille</span></li>
-              <li><span class="n">1</span>Marina Hartner sucht <input class="gap" aria-label="Marina Hartner sucht" data-sol="einen Partner"></li>
-              <li><span class="n">2</span>Benjamin Rüssel hat <input class="gap" aria-label="Benjamin Rüssel hat" data-sol="keinen Schlüssel|keinen Schluessel"></li>
-              <li><span class="n">3</span>Janina Rift hat <input class="gap" aria-label="Janina Rift hat" data-sol="keinen Stift"></li>
-              <li><span class="n">4</span>Alina Hampe braucht <input class="gap" aria-label="Alina Hampe braucht" data-sol="eine Lampe"></li>
-              <li><span class="n">5</span>Liane Rühle hat <input class="gap" aria-label="Liane Rühle hat" data-sol="keine Stühle|keine Stuehle"></li>
-              <li><span class="n">6</span>Johannes Frisch hat <input class="gap" aria-label="Johannes Frisch hat" data-sol="keinen Tisch"></li>
-              <li><span class="n">7</span>Elena Blücher kauft <input class="gap" aria-label="Elena Blücher kauft" data-sol="keine Bücher|keine Buecher"></li>
-              <li><span class="n">8</span>Hans-Peter Reife hat <input class="gap" aria-label="Hans-Peter Reife hat" data-sol="keine Seife"></li>
-              <li><span class="n">9</span>Mario Klinge hat <input class="gap" aria-label="Mario Klinge hat" data-sol="keine Ringe"></li>
-              <li><span class="n">10</span>Florian Masche braucht <input class="gap" aria-label="Florian Masche braucht" data-sol="eine Tasche"></li>
-              <li><span class="n">11</span>Larissa Nuh hat <input class="gap" aria-label="Larissa Nuh hat" data-sol="keine Uhr"></li>
-            </ul>
+            <div class="heft">
+              <ul class="lines" id="huecos">
+                <li><span class="n">0</span>Hubertus Grille braucht <span class="ex">eine Brille</span></li>
+                <li><span class="n">1</span>Marina Hartner sucht <input class="gap" aria-label="Marina Hartner sucht" data-sol="einen Partner"></li>
+                <li><span class="n">2</span>Benjamin Rüssel hat <input class="gap" aria-label="Benjamin Rüssel hat" data-sol="keinen Schlüssel|keinen Schluessel"></li>
+                <li><span class="n">3</span>Janina Rift hat <input class="gap" aria-label="Janina Rift hat" data-sol="keinen Stift"></li>
+                <li><span class="n">4</span>Alina Hampe braucht <input class="gap" aria-label="Alina Hampe braucht" data-sol="eine Lampe"></li>
+                <li><span class="n">5</span>Liane Rühle hat <input class="gap" aria-label="Liane Rühle hat" data-sol="keine Stühle|keine Stuehle"></li>
+                <li><span class="n">6</span>Johannes Frisch hat <input class="gap" aria-label="Johannes Frisch hat" data-sol="keinen Tisch"></li>
+                <li><span class="n">7</span>Elena Blücher kauft <input class="gap" aria-label="Elena Blücher kauft" data-sol="keine Bücher|keine Buecher"></li>
+                <li><span class="n">8</span>Hans-Peter Reife hat <input class="gap" aria-label="Hans-Peter Reife hat" data-sol="keine Seife"></li>
+                <li><span class="n">9</span>Mario Klinge hat <input class="gap" aria-label="Mario Klinge hat" data-sol="keine Ringe"></li>
+                <li><span class="n">10</span>Florian Masche braucht <input class="gap" aria-label="Florian Masche braucht" data-sol="eine Tasche"></li>
+                <li><span class="n">11</span>Larissa Nuh hat <input class="gap" aria-label="Larissa Nuh hat" data-sol="keine Uhr"></li>
+              </ul>
+            </div>
             <div class="tools">
               <button class="btn btn-primary btn-small" type="button" id="btnCheck">Kontrollieren</button>
               <button class="btn btn-small" type="button" id="btnSol">Lösung zeigen</button>
-              <button class="btn btn-small" type="button" id="btnReset">Noch einmal</button>
+              <button class="btn btn-rot btn-small" type="button" id="btnReset">Noch einmal</button>
               <span class="score" id="score" aria-live="polite"></span>
             </div>
-            <p class="muted" style="font-size:.86rem;margin:1rem 0 0">Ojo con el 3: en las soluciones del libro dice <em>einen Stift</em>, pero en la canción se oye <em>keinen Stift</em>. Vale lo que se oye.</p>
+            <p class="hinweis">Ojo con el 3: en las soluciones del libro dice <em>einen Stift</em>, pero en la canción se oye <em>keinen Stift</em>. Vale lo que se oye.</p>
           </div>
 
           <div class="card">
-            <p class="kicker k-amber">La regla</p>
+            <span class="label c-pl">Die Regel</span>
             <h3>Solo cambia el masculino</h3>
             <table class="rule">
               <thead><tr><th></th><th>Nominativ</th><th>Akkusativ</th></tr></thead>
               <tbody>
-                <tr class="hit"><td class="m">der Tisch</td><td>ein · kein</td><td><b>einen · keinen</b></td></tr>
-                <tr><td class="f">die Lampe</td><td>eine · keine</td><td>eine · keine</td></tr>
-                <tr><td class="ne">das Bett</td><td>ein · kein</td><td>ein · kein</td></tr>
-                <tr><td class="pl">die Stühle</td><td>– · keine</td><td>– · keine</td></tr>
+                <tr class="g-der"><td>der Tisch</td><td>ein · kein</td><td><b>einen · keinen</b></td></tr>
+                <tr class="g-die"><td>die Lampe</td><td>eine · keine</td><td>eine · keine</td></tr>
+                <tr class="g-das"><td>das Bett</td><td>ein · kein</td><td>ein · kein</td></tr>
+                <tr class="g-pl"><td>die Stühle</td><td>– · keine</td><td>– · keine</td></tr>
               </tbody>
             </table>
-            <p style="margin:.9rem 0 0;font-size:.95rem"><em>haben, brauchen, suchen, kaufen</em> piden Akkusativ. Por eso Johannes tiene <b>keinen</b> Tisch y no <em>kein</em> Tisch.</p>
+            <p style="margin:.9rem 0 0;font-size:.97rem"><em>haben, brauchen, suchen, kaufen</em> piden Akkusativ. Por eso Johannes tiene <b class="c-der">keinen</b> Tisch y no <em>kein</em> Tisch.</p>
           </div>
         </div>
       </div>
@@ -124,12 +132,12 @@
 
     <section class="section">
       <div class="wrap grid-2">
-        <div class="card">
-          <p class="kicker k-plum">Der Refrain · para cantarlo</p>
-          <p class="refrain">Wir suchen hier. Wir suchen da.<br>Wir finden alles. Das ist ja klar.<br>Wir lernen sehr schnell. Es ist ja nicht schwer.<br>Wir brauchen keine Hilfe. Nein, nein, nein – danke sehr!</p>
+        <div class="tafel">
+          <span class="label">Der Refrain · zum Mitsingen</span>
+          <p class="tafel-text">Wir suchen hier. Wir suchen da.<br>Wir finden alles. Das ist ja klar.<br>Wir lernen sehr schnell. Es ist ja nicht schwer.<br>Wir brauchen keine Hilfe.<br>Nein, nein, nein – danke sehr!</p>
         </div>
-        <div class="card">
-          <p class="kicker">Deine Strophe</p>
+        <div class="postit">
+          <span class="label">Deine Strophe</span>
           <h3>Ahora tú</h3>
           <p style="font-size:.95rem">Inventa una persona cuyo apellido rime con una cosa. Por ejemplo: <em>Lena Kasse braucht eine Tasse.</em></p>
           <div class="field"><label for="vName">Nombre y apellido</label><input id="vName" placeholder="Lena Kasse" autocomplete="off"></div>
@@ -151,7 +159,7 @@
 <dialog class="qr-modal" id="qrModal" aria-label="Código QR de esta página">
   <img src="assets/johannes-frisch/qr.svg" alt="Código QR que abre esta página">
   <p>socyb.github.io/deutsch-a1/johannes-frisch.html</p>
-  <form method="dialog"><button class="btn btn-small">Cerrar</button></form>
+  <form method="dialog"><button class="btn btn-small">Schließen</button></form>
 </dialog>
 
 <script src="assets/johannes-frisch/johannes-frisch.js"></script>

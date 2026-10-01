@@ -24,9 +24,9 @@ document.addEventListener("uebung:abierta", () => {
   function corrige() {
     let ok = 0;
     gaps.forEach(g => {
-      const bien = good(g);
+      const vacio = !g.value.trim(), bien = good(g);
       g.classList.toggle("ok", bien);
-      g.classList.toggle("bad", !bien);
+      g.classList.toggle("bad", !bien && !vacio);
       if (bien) ok++;
     });
     score.textContent = ok + " / " + gaps.length + (ok === gaps.length ? " · Super!" : "");
